@@ -2,17 +2,17 @@ import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gap/gap.dart';
-import 'package:hiddify/core/app_info/app_info_provider.dart';
-import 'package:hiddify/core/directories/directories_provider.dart';
-import 'package:hiddify/core/localization/translations.dart';
-import 'package:hiddify/core/model/constants.dart';
-import 'package:hiddify/core/model/failures.dart';
-import 'package:hiddify/core/router/dialog/dialog_notifier.dart';
-import 'package:hiddify/core/widget/adaptive_icon.dart';
-import 'package:hiddify/features/app_update/notifier/app_update_notifier.dart';
-import 'package:hiddify/features/app_update/notifier/app_update_state.dart';
-import 'package:hiddify/gen/assets.gen.dart';
-import 'package:hiddify/utils/utils.dart';
+import 'package:cloud_vpn/core/app_info/app_info_provider.dart';
+import 'package:cloud_vpn/core/directories/directories_provider.dart';
+import 'package:cloud_vpn/core/localization/translations.dart';
+import 'package:cloud_vpn/core/model/constants.dart';
+import 'package:cloud_vpn/core/model/failures.dart';
+import 'package:cloud_vpn/core/router/dialog/dialog_notifier.dart';
+import 'package:cloud_vpn/core/widget/adaptive_icon.dart';
+import 'package:cloud_vpn/features/app_update/notifier/app_update_notifier.dart';
+import 'package:cloud_vpn/features/app_update/notifier/app_update_state.dart';
+import 'package:cloud_vpn/gen/assets.gen.dart';
+import 'package:cloud_vpn/utils/utils.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class AboutPage extends HookConsumerWidget {
