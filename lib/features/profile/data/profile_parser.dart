@@ -4,14 +4,14 @@ import 'dart:io';
 import 'package:dartx/dartx.dart';
 import 'package:dio/dio.dart';
 import 'package:fpdart/fpdart.dart';
-import 'package:hiddify/core/db/db.dart';
-import 'package:hiddify/core/http_client/dio_http_client.dart';
-import 'package:hiddify/features/profile/data/profile_data_mapper.dart';
-import 'package:hiddify/features/profile/model/profile_entity.dart';
-import 'package:hiddify/features/profile/model/profile_failure.dart';
-import 'package:hiddify/features/settings/data/config_option_repository.dart';
-import 'package:hiddify/singbox/model/singbox_proxy_type.dart';
-import 'package:hiddify/utils/utils.dart';
+import 'package:cloud_vpn/core/db/db.dart';
+import 'package:cloud_vpn/core/http_client/dio_http_client.dart';
+import 'package:cloud_vpn/features/profile/data/profile_data_mapper.dart';
+import 'package:cloud_vpn/features/profile/model/profile_entity.dart';
+import 'package:cloud_vpn/features/profile/model/profile_failure.dart';
+import 'package:cloud_vpn/features/settings/data/config_option_repository.dart';
+import 'package:cloud_vpn/singbox/model/singbox_proxy_type.dart';
+import 'package:cloud_vpn/utils/utils.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:meta/meta.dart';
 
@@ -30,7 +30,7 @@ import 'package:meta/meta.dart';
 class ProfileParser {
   // Synthetic sentinel assigned to `total` for "unlimited" traffic (subscription-userinfo total=0 or
   // missing). It MUST stay above the 10 TB "unlimited" threshold the UI uses to decide whether to show
-  // "∞" (isInfinitSize() in lib/utils/number_formatters.dart, and profile_tile.dart). The previous
+  // "鈭? (isInfinitSize() in lib/utils/number_formatters.dart, and profile_tile.dart). The previous
   // value (~857 GiB) was below that gate, so total=0 rendered as a finite cap / "quota exceeded".
   // See https://github.com/hiddify/hiddify-app/issues/1974 . 1000 TiB.
   static const infiniteTrafficThreshold = 1_099_511_627_776_000;

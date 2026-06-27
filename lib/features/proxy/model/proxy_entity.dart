@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:hiddify/singbox/model/singbox_proxy_type.dart';
+import 'package:cloud_vpn/singbox/model/singbox_proxy_type.dart';
 
 part 'proxy_entity.freezed.dart';
 
@@ -30,8 +30,8 @@ class ProxyItemEntity with _$ProxyItemEntity {
 
   String get name => _sanitizedTag(tag);
   String? get selectedName => selectedTag == null ? null : _sanitizedTag(selectedTag!);
-  bool get isVisible => !tag.contains("§hide§");
+  bool get isVisible => !tag.contains("搂hide搂");
 }
 
-String _sanitizedTag(String tag) => tag.replaceFirst(RegExp(r"\§[^]*"), "").trimRight();
-// bool get isVisible => !tag.contains("§hide§");
+String _sanitizedTag(String tag) => tag.replaceFirst(RegExp(r"\搂[^]*"), "").trimRight();
+// bool get isVisible => !tag.contains("搂hide搂");

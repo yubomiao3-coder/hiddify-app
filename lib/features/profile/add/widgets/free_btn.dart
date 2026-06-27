@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:hiddify/core/localization/locale_preferences.dart';
-import 'package:hiddify/core/localization/translations.dart';
-import 'package:hiddify/features/common/custom_text_scroll.dart';
-import 'package:hiddify/features/profile/add/model/free_profiles_model.dart';
+import 'package:cloud_vpn/core/localization/locale_preferences.dart';
+import 'package:cloud_vpn/core/localization/translations.dart';
+import 'package:cloud_vpn/features/common/custom_text_scroll.dart';
+import 'package:cloud_vpn/features/profile/add/model/free_profiles_model.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class FreeBtn extends ConsumerWidget {
@@ -63,7 +63,7 @@ class FreeBtn extends ConsumerWidget {
                 ),
               ),
               CustomTextScroll(
-                isFa ? freeProfile.tags.fa.join(' · ') : freeProfile.tags.en.join(' · '),
+                isFa ? freeProfile.tags.fa.join(' 路 ') : freeProfile.tags.en.join(' 路 '),
                 style: theme.textTheme.labelMedium!.copyWith(color: theme.colorScheme.onSurfaceVariant),
               ),
             ],

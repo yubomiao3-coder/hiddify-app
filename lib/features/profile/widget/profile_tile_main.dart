@@ -2,11 +2,11 @@ import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gap/gap.dart';
-import 'package:hiddify/core/localization/translations.dart';
-import 'package:hiddify/core/router/dialog/dialog_notifier.dart';
-import 'package:hiddify/features/profile/model/profile_entity.dart';
-import 'package:hiddify/features/profile/notifier/profile_notifier.dart';
-import 'package:hiddify/utils/utils.dart';
+import 'package:cloud_vpn/core/localization/translations.dart';
+import 'package:cloud_vpn/core/router/dialog/dialog_notifier.dart';
+import 'package:cloud_vpn/features/profile/model/profile_entity.dart';
+import 'package:cloud_vpn/features/profile/notifier/profile_notifier.dart';
+import 'package:cloud_vpn/utils/utils.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -117,7 +117,7 @@ class ProfileTileMain extends HookConsumerWidget {
                           _UsageRow(
                             icon: null, //FluentIcons.timer_24_regular,
                             title: subInfo.remaining.inDays > 365
-                                ? "∞ days remaining"
+                                ? "鈭?days remaining"
                                 : "${subInfo.remaining.inDays}/30 days remaining",
                             progress: subInfo.remaining.inDays > 365 ? 0 : subInfo.remaining.inDays / 30,
                             color: _getProgressColor(1 - (subInfo.remaining.inDays / 30)),
@@ -220,7 +220,7 @@ class ProfileTileMain extends HookConsumerWidget {
   Widget _BandwithUsageRow(SubscriptionInfo subInfo) {
     return _UsageRow(
       icon: FluentIcons.data_usage_24_filled,
-      title: subInfo.total.isInfinitSize() ? "∞ GB remaining" : "${subInfo.remainingBWratio * 100}% remaining",
+      title: subInfo.total.isInfinitSize() ? "鈭?GB remaining" : "${subInfo.remainingBWratio * 100}% remaining",
       progress: subInfo.total.isInfinitSize() ? 1 : subInfo.remainingBWratio,
       color: _getProgressColor(subInfo.remainingBWratio),
     );

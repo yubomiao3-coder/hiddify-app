@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gap/gap.dart';
-import 'package:hiddify/core/localization/translations.dart';
-import 'package:hiddify/core/notification/in_app_notification_controller.dart';
-import 'package:hiddify/core/router/dialog/dialog_notifier.dart';
-import 'package:hiddify/features/settings/data/config_option_repository.dart';
-import 'package:hiddify/hiddifycore/hiddify_core_service_provider.dart';
+import 'package:cloud_vpn/core/localization/translations.dart';
+import 'package:cloud_vpn/core/notification/in_app_notification_controller.dart';
+import 'package:cloud_vpn/core/router/dialog/dialog_notifier.dart';
+import 'package:cloud_vpn/features/settings/data/config_option_repository.dart';
+import 'package:cloud_vpn/hiddifycore/hiddify_core_service_provider.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class LanSharingPreferenceWidget extends HookConsumerWidget {

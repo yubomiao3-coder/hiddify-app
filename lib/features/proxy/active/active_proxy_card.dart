@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hiddify/core/localization/translations.dart';
-import 'package:hiddify/core/router/dialog/dialog_notifier.dart';
-import 'package:hiddify/features/connection/model/connection_status.dart';
-import 'package:hiddify/features/connection/notifier/connection_notifier.dart';
-import 'package:hiddify/features/proxy/active/active_proxy_notifier.dart';
-import 'package:hiddify/features/proxy/active/ip_widget.dart';
-import 'package:hiddify/hiddifycore/generated/v2/hcore/hcore.pb.dart';
-import 'package:hiddify/utils/custom_loggers.dart';
+import 'package:cloud_vpn/core/localization/translations.dart';
+import 'package:cloud_vpn/core/router/dialog/dialog_notifier.dart';
+import 'package:cloud_vpn/features/connection/model/connection_status.dart';
+import 'package:cloud_vpn/features/connection/notifier/connection_notifier.dart';
+import 'package:cloud_vpn/features/proxy/active/active_proxy_notifier.dart';
+import 'package:cloud_vpn/features/proxy/active/ip_widget.dart';
+import 'package:cloud_vpn/hiddifycore/generated/v2/hcore/hcore.pb.dart';
+import 'package:cloud_vpn/utils/custom_loggers.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class ActiveProxyFooter extends ConsumerWidget with InfraLogger {
@@ -119,7 +119,7 @@ class ActiveProxyFooter extends ConsumerWidget with InfraLogger {
 String getRealOutboundTag(OutboundInfo group) {
   var tag = group.tagDisplay;
   if (group.groupSelectedTagDisplay != "" && group.groupSelectedTagDisplay != tag) {
-    tag = "$tag → ${group.groupSelectedTagDisplay}";
+    tag = "$tag 鈫?${group.groupSelectedTagDisplay}";
   }
   return tag;
 }

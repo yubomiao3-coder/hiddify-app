@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:hiddify/core/localization/translations.dart';
-import 'package:hiddify/core/model/failures.dart';
-import 'package:hiddify/features/settings/model/config_option_failure.dart';
+import 'package:cloud_vpn/core/localization/translations.dart';
+import 'package:cloud_vpn/core/model/failures.dart';
+import 'package:cloud_vpn/features/settings/model/config_option_failure.dart';
 
 part 'profile_failure.freezed.dart';
 

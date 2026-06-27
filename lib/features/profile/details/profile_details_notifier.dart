@@ -1,15 +1,15 @@
 import 'dart:convert';
 
-import 'package:hiddify/core/localization/translations.dart';
-import 'package:hiddify/core/model/failures.dart';
-import 'package:hiddify/core/notification/in_app_notification_controller.dart';
-import 'package:hiddify/core/router/dialog/dialog_notifier.dart';
-import 'package:hiddify/features/profile/data/profile_data_providers.dart';
-import 'package:hiddify/features/profile/data/profile_repository.dart';
-import 'package:hiddify/features/profile/details/profile_details_state.dart';
-import 'package:hiddify/features/profile/model/profile_entity.dart';
-import 'package:hiddify/features/profile/model/profile_failure.dart';
-import 'package:hiddify/utils/utils.dart';
+import 'package:cloud_vpn/core/localization/translations.dart';
+import 'package:cloud_vpn/core/model/failures.dart';
+import 'package:cloud_vpn/core/notification/in_app_notification_controller.dart';
+import 'package:cloud_vpn/core/router/dialog/dialog_notifier.dart';
+import 'package:cloud_vpn/features/profile/data/profile_data_providers.dart';
+import 'package:cloud_vpn/features/profile/data/profile_repository.dart';
+import 'package:cloud_vpn/features/profile/details/profile_details_state.dart';
+import 'package:cloud_vpn/features/profile/model/profile_entity.dart';
+import 'package:cloud_vpn/features/profile/model/profile_failure.dart';
+import 'package:cloud_vpn/utils/utils.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'profile_details_notifier.g.dart';
