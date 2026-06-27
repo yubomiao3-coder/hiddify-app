@@ -4,30 +4,30 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:hiddify/core/analytics/analytics_controller.dart';
-import 'package:hiddify/core/app_info/app_info_provider.dart';
-import 'package:hiddify/core/directories/directories_provider.dart';
-import 'package:hiddify/core/localization/translations.dart';
-import 'package:hiddify/core/logger/logger.dart';
-import 'package:hiddify/core/logger/logger_controller.dart';
-import 'package:hiddify/core/model/environment.dart';
-import 'package:hiddify/core/preferences/general_preferences.dart';
-import 'package:hiddify/core/preferences/preferences_migration.dart';
-import 'package:hiddify/core/preferences/preferences_provider.dart';
-import 'package:hiddify/features/app/widget/app.dart';
-import 'package:hiddify/features/auto_start/notifier/auto_start_notifier.dart';
-import 'package:hiddify/features/chain/model/chain_enum.dart';
-import 'package:hiddify/features/chain/notifier/chain_profile_notifier.dart';
+import 'package:cloud_vpn/core/analytics/analytics_controller.dart';
+import 'package:cloud_vpn/core/app_info/app_info_provider.dart';
+import 'package:cloud_vpn/core/directories/directories_provider.dart';
+import 'package:cloud_vpn/core/localization/translations.dart';
+import 'package:cloud_vpn/core/logger/logger.dart';
+import 'package:cloud_vpn/core/logger/logger_controller.dart';
+import 'package:cloud_vpn/core/model/environment.dart';
+import 'package:cloud_vpn/core/preferences/general_preferences.dart';
+import 'package:cloud_vpn/core/preferences/preferences_migration.dart';
+import 'package:cloud_vpn/core/preferences/preferences_provider.dart';
+import 'package:cloud_vpn/features/app/widget/app.dart';
+import 'package:cloud_vpn/features/auto_start/notifier/auto_start_notifier.dart';
+import 'package:cloud_vpn/features/chain/model/chain_enum.dart';
+import 'package:cloud_vpn/features/chain/notifier/chain_profile_notifier.dart';
 
-import 'package:hiddify/features/log/data/log_data_providers.dart';
-import 'package:hiddify/features/profile/data/profile_data_providers.dart';
-import 'package:hiddify/features/profile/notifier/active_profile_notifier.dart';
-import 'package:hiddify/features/proxy/active/active_proxy_notifier.dart';
-import 'package:hiddify/features/system_tray/notifier/system_tray_notifier.dart';
-import 'package:hiddify/features/window/notifier/window_notifier.dart';
-import 'package:hiddify/hiddifycore/hiddify_core_service_provider.dart';
-import 'package:hiddify/riverpod_observer.dart';
-import 'package:hiddify/utils/utils.dart';
+import 'package:cloud_vpn/features/log/data/log_data_providers.dart';
+import 'package:cloud_vpn/features/profile/data/profile_data_providers.dart';
+import 'package:cloud_vpn/features/profile/notifier/active_profile_notifier.dart';
+import 'package:cloud_vpn/features/proxy/active/active_proxy_notifier.dart';
+import 'package:cloud_vpn/features/system_tray/notifier/system_tray_notifier.dart';
+import 'package:cloud_vpn/features/window/notifier/window_notifier.dart';
+import 'package:cloud_vpn/hiddifycore/hiddify_core_service_provider.dart';
+import 'package:cloud_vpn/riverpod_observer.dart';
+import 'package:cloud_vpn/utils/utils.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 
@@ -135,7 +135,7 @@ Future<void> lazyBootstrap(WidgetsBinding widgetsBinding, Environment env) async
   if (!kIsWeb) {
     FlutterNativeSplash.remove();
   }
-  // SentryFlutter.s(DateTime.now().toUtc());
+  // SentryFlutter.init(DateTime.now().toUtc());
 }
 
 Future<T> _init<T>(String name, Future<T> Function() initializer, {int? timeout}) async {
