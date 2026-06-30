@@ -33,9 +33,21 @@ boolean hasKeyStore = false
 
 def keystoreProperties = new Properties()
 def keystorePropertiesFile = rootProject.file('key.properties')
-if (keystorePropertiesFile.exists()) {
+def keystoreFile = rootProject.file('key.jks')
+if (keystorePropertiesFile.exists()
+        && keystoreFile.exists()
+        && keystoreFile.length() > 0) {
     keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
-    hasKeyStore = true
+    def alias = keystoreProperties['keyAlias']
+    def storePwd = keystoreProperties['storePassword']
+    if (alias && alias.toString().trim().length() > 0
+            && storePwd && storePwd.toString().trim().length() > 0) {
+        hasKeyStore = true
+    } else {
+        println "+++"
+        println "key.properties is missing keyAlias or storePassword. Falling back to debug signing."
+        println "+++"
+    }
 } else {
     println "+++"
     println "No keystore defined. The app will not be signed."
